@@ -15,10 +15,9 @@ def showall():
 
 @app.route('/newgame', methods=['POST'])
 def insert():
-    #request_data = request.get_json()  # getting data from client
-    #games_data.add_game(request_data["title"], request_data["platform"],request_data["score"],
-    #                request_data["genre"],request_data["editors_choice"])
-    games_data.add_game('NHL 13','xbox360',8.5,'Sports','Y')
+    request_data = request.get_json()  # getting data from client
+    games_data.add_game(request_data["title"], request_data["platform"],request_data["score"],
+                    request_data["genre"],request_data["editors_choice"])
     response = Response("Game added", 201, mimetype='application/json')
     return response
 
