@@ -1,4 +1,4 @@
-from app import *
+
 import json
 from flask_sqlalchemy import SQLAlchemy
 from flask import Flask,jsonify
